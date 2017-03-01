@@ -11,7 +11,7 @@ runAsRoot(){
 }
 packages(){
   #Desktop
-  pacman -S --noconfirm i3-wm i3 compton conky lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings shadow arc-icon-theme arc-solid-gtk-theme
+  pacman -S --noconfirm i3-wm i3 dmenu compton conky lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings shadow arc-icon-theme arc-solid-gtk-theme feh
   #Terminal
   pacman -S --noconfirm vim zsh tmux termite
   #Programming
@@ -40,7 +40,7 @@ git(){
 aurPackages(){
   yaourt -S  --noconfirm google-chrome i3blocks packer spotify vivaldi blockify
 }
-firewalldSettings(){
+systemdSettings(){
   systemctl enable lightdm
   systemctl enable firewalld
   systemctl enable docker
@@ -53,7 +53,7 @@ main(){
   packages
   aurPackages
   git
-  firewalldSettings
+  systemdSettings
 }
 
 main "${@}"

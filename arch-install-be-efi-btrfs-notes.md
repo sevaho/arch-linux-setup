@@ -132,7 +132,7 @@ hwclock --systohc
 
 ```
 
-Edit /etc/locale.gen and search for the line "be_BY.UTF-8 UTF-8" and uncomment.
+Edit /etc/locale.gen and search for the lines "be_BY.UTF-8 UTF-8" and "en_US.UTF-8 UTF-8" . Uncomment these.
 
 ```bash
 
