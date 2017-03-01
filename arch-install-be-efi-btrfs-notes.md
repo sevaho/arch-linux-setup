@@ -48,7 +48,9 @@ cgdisk /dev/sdx
 Write to disk
 
 > NOTE: replace sdx with the name of the partition you want to use.
+
 > NOTE: swap size depends on ram size, 1.5 times ram, fe. if you have 16G of ram, commonly you would use a swap size of 24GiB.
+
 > NOTE: having an all-in-one partition is used for personal use only, **for server use** it is recommended to have a seperate home and root partition.
 
 
@@ -106,6 +108,7 @@ genfstab -U /mnt >> /mnt/etc/fstab
 Change the fsck order of your btrfs partition in etc/fstab from **1 to 0**. 
 
 > NOTE: if you have an SSD use these options at your btrfs partition in etc/fstab: "rw,relatime,ssd,space_cache,subvolid=5,subvol=/".
+
 > NOTE: check if the UUID's are the right ones and that every entry in etc/fstab has a UUID instead of the logical path (fe. /boot)! check with "blkid".
 
 
