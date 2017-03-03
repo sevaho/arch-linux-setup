@@ -11,11 +11,11 @@ runAsRoot(){
 }
 packages(){
   #Desktop
-  pacman -S --noconfirm i3-wm i3 dmenu compton conky lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings shadow arc-icon-theme arc-solid-gtk-theme feh
+  pacman -S --noconfirm i3-wm i3 dmenu compton conky lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings feh
   #Terminal
   pacman -S --noconfirm vim zsh tmux termite
   #Programming
-  pacman -S --noconfirm docker npm python ansible vagrant php git nodejs ruby shellcheck js jdk8-openjdk
+  pacman -S --noconfirm docker npm python ansible vagrant php git nodejs ruby shellcheck js jdk8-openjdk autoconf automake pkg-config m4 make
   #Python adds
   pacman -S --noconfirm python-keyring python-requests python-pip
   #Apps
@@ -29,8 +29,9 @@ packages(){
   #Compression
   pacman -S --noconfirm zip unzip unrar unace 
   #Other
-  pacman -S --noconfirm dkms exfat-utils
-  #pacman -S --noconfirm 
+  pacman -S --noconfirm dkms exfat-utils telegram
+  #Fonts, themes & icons
+  pacman -S --noconfirm shadow arc-icon-theme arc-solid-gtk-theme ttf-font-awesome 
 
 }
 git(){
@@ -38,7 +39,7 @@ git(){
   git config --global user.email "sebastiaan.vanhoecke@hotmail.be"
 }
 aurPackages(){
-  yaourt -S  --noconfirm google-chrome i3blocks packer spotify vivaldi blockify
+  yaourt -S  --noconfirm google-chrome i3blocks packer spotify vivaldi font-manager foxitreader
 }
 systemdSettings(){
   systemctl enable lightdm
@@ -54,6 +55,8 @@ main(){
   aurPackages
   git
   systemdSettings
+  
+  echo "install etcher"
 }
 
 main "${@}"
