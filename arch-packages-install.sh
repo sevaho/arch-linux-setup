@@ -19,7 +19,7 @@ packages(){
   #Python adds
   pacman -S --noconfirm python-keyring python-requests python-pip
   #Apps
-  pacman -S --noconfirm tlp gtk3 evince geary w3m mpv htop youtube-dl mclocate scrot shotwell transmission-gtk ack wget curl lm_sensors gparted pcmanfm screenfetch hardinfo lsb-release galculator dconf-editor dconf dmidecode filezilla tree rofi ranger highlight atool mediainfo
+  pacman -S --noconfirm tlp gtk3 evince geary w3m mpv htop youtube-dl mlocate scrot shotwell transmission-gtk ack wget curl lm_sensors gparted pcmanfm screenfetch hardinfo lsb-release galculator dconf-editor dconf dmidecode filezilla tree rofi ranger highlight atool mediainfo
   #Network
   pacman -S --noconfirm networkmanager network-manager-applet nmap wireshark-gtk firewalld iftop
   #AUR managers
@@ -29,7 +29,7 @@ packages(){
   #Compression
   pacman -S --noconfirm zip unzip unrar unace 
   #Other
-  pacman -S --noconfirm dkms exfat-utils telegram
+  pacman -S --noconfirm dkms exfat-utils synaptics
   #Fonts, themes & icons
   pacman -S --noconfirm shadow arc-icon-theme arc-solid-gtk-theme ttf-font-awesome 
 
