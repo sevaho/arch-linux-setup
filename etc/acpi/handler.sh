@@ -1,4 +1,5 @@
 #!/bin/bash
+# Default acpi script that takes an entry for all actions
 
 case "$1" in
     button/volumeup)
@@ -32,6 +33,25 @@ case "$1" in
             unplug)
                 logger 'headphone jack unplugged'
                 amixer -c1 -q sset Speaker unmute
+                ;;
+        esac
+        ;;
+
+  video/brightnessdown)
+        case "$2" in
+            BRTDN)
+                logger 'brightnessdown pressed'
+                echo $((($(cat /sys/class/backlight/intel_backlight/brightness) - 500))) > /sys/class/backlight/intel_backlight/brightness
+                ;;
+        esac
+        ;;
+
+  video/brightnessup)
+        case "$2" in
+            BRTUP)
+                logger 'brightnessup pressed'
+                echo $((($(cat /sys/class/backlight/intel_backlight/brightness) + 500))) > /sys/class/backlight/intel_backlight/brightness 2> logger
+
                 ;;
         esac
         ;;
