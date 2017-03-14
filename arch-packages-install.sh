@@ -39,7 +39,7 @@ git(){
   git config --global user.email "sebastiaan.vanhoecke@hotmail.be"
 }
 aurPackages(){
-  yaourt -S  --noconfirm google-chrome i3blocks packer spotify vivaldi font-manager foxitreader
+  yaourt -S  --noconfirm google-chrome i3blocks packer spotify vivaldi font-manager foxitreader i3-gaps-git
 }
 systemdSettings(){
   systemctl enable lightdm
