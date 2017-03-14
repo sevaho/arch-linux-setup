@@ -11,7 +11,7 @@ runAsRoot(){
 }
 packages(){
   #Desktop
-  pacman -S --noconfirm i3-wm i3 dmenu compton conky lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings feh
+  pacman -S --noconfirm i3-wm i3 i3-lock dmenu compton conky lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings feh 
   #Terminal
   pacman -S --noconfirm vim zsh tmux termite
   #Programming
