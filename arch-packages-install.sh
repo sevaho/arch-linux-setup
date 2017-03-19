@@ -29,7 +29,7 @@ packages(){
   #Compression
   pacman -S --noconfirm zip unzip unrar unace 
   #Other
-  pacman -S --noconfirm dkms exfat-utils synaptics
+  pacman -S --noconfirm dkms exfat-utils synaptics mtools libisoburn
   #Fonts, themes & icons
   pacman -S --noconfirm shadow arc-icon-theme arc-solid-gtk-theme ttf-font-awesome 
 
