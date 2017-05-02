@@ -29,7 +29,7 @@ packages(){
   #Compression
   pacman -S --noconfirm zip unzip unrar unace 
   #Other
-  pacman -S --noconfirm dkms exfat-utils synaptics mtools libisoburn bind-tools
+  pacman -S --noconfirm dkms exfat-utils synaptics mtools libisoburn bind-tools sysstat ntp udisks2 udiskie
   #Fonts, themes & icons
   pacman -S --noconfirm shadow arc-icon-theme arc-solid-gtk-theme ttf-font-awesome 
 
@@ -46,6 +46,7 @@ systemdSettings(){
   systemctl enable firewalld
   systemctl enable docker
   systemctl enable NetworkManager
+  systemctl enable ntpd
 }
 
 main(){
